@@ -1,16 +1,17 @@
 var nav = document.getElementById("leftsidenav");
 var menu = document.getElementById("menu-btn");
+var burger = document.getElementById("burger");
 var background = document.body;
 
 if ($(window).width() < 620 || $(window).height() < 620) {
     function openNav() {
         nav.style.width = "100%";
-        menu.style.visibility = "hidden";
+        burger.style.visibility = "hidden";
     }
 
     function closeNav() {
         nav.style.width = "0%";
-        menu.style.visibility = "visible";
+        burger.style.visibility = "visible";
     }
 } else {
     function openNav() {

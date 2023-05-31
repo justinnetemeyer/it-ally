@@ -47,9 +47,17 @@ body {
 
 /* Nav Menu */
 #menu-btn {
-    font-size: 1.33em;
-    font-weight: 600;
+    margin: 20px 0 0;
+    font-size: 1.66em;
+    font-weight: 800;
     cursor: pointer;
+    transition: .33s ease;
+}
+
+#menu-btn:hover {
+    color: var(--color-secondary);
+    text-shadow: 0 0 10px var(--color-main);
+    -webkit-text-stroke: .5px var(--color-main);
 }
 
 .sidenav {
@@ -91,6 +99,84 @@ body {
   @media screen and (max-height: 450px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
+}
+
+/* Form Styling */
+
+fieldset {
+    margin: 20px 0;
+    border-radius: 5px;
+    border: 2px solid var(--color-secondary);
+    border-style: outset;
+    box-shadow: var(--black) 1px 1px 4px;
+}
+  
+fieldset legend {
+    text-align: center;
+    padding: 2px 5px;
+    color: var(--white);
+    background-color: var(--color-main);
+    border-radius: 10px;
+    border: 2px solid var(--color-secondary);
+    border-style: outset;
+}
+  
+fieldset p {
+    padding: 10px;
+    margin: 10px;
+}
+  
+fieldset p label {
+    text-align: left;
+    display: block;
+    margin: 0 0 5px;
+}
+  
+textarea {
+    overflow: auto;
+}
+  
+form input[type=text],
+form input[type=email],
+form select,
+form textarea {
+    line-height: 1.5;
+    font-size: 1.17em;
+    width: 90%;
+    display: flex;
+    text-align: left;
+}
+
+form textarea {
+    max-width: 900px;
+}
+
+#submit {
+    position: relative;
+    padding: 15px 30px;
+    margin: 10px;
+    background: var(--color-main);
+    color: var(--white);
+    border: 2px solid var(--color-secondary);
+    border-style: outset;
+    border-radius: 10px;
+    transition: .25s;
+}
+  
+#submit:hover {
+    box-shadow: 0px 0px 20px var(--color-main);
+    cursor: pointer;
+}
+
+/* Validation Error Styling */
+
+#fname-error,
+#email-error,
+#subject-error,
+#comments-error {
+  padding: 10px 0 0;
+  font-size: 1.25em;
+  text-shadow: var(--color-secondary) 1px 0 5px;
 }
 
 /* Cards */
@@ -203,9 +289,36 @@ body {
         grid-template-columns: 300px 300px;
         grid-template-rows: 400px;
     }
+    
+    form textarea {
+        max-width: 700px;
+    }
 }
 
 @media (max-width: 620px) {
+    #menu-btn {
+        display: none;
+    }
+    
+    #burger {
+        cursor: pointer;
+        position: absolute;
+        top: 2%;
+        left: 7.5%;
+    }
+
+    #burger div {
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 6px 0;
+        border-radius: 0;
+      }
+    
+    #burger div:nth-child(2) {
+        border-radius: 5px;
+    }
+
     .container {
         margin: 25px 0 0;
         position: relative;
@@ -213,5 +326,18 @@ body {
         display: grid;
         grid-template-columns: 300px;
         grid-template-rows: 400px;
+    }
+
+    .container .card:hover .face.face1 {
+        background-color: var(--color-main);
+        transform: translateY(100px);
+    }
+
+    .container .card:hover .face.face2 {
+        transform: translateY(-100px);
+    }
+
+    form textarea {
+        max-width: 420px;
     }
 }

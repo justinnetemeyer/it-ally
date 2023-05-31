@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Ally | Contact</title>
+    <link rel="stylesheet" href="/css/styles.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> <!--Custom Google Font-->
+</head>
+<body class="wrapper">
+    <nav id="leftsidenav" class="sidenav">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeNav()">&times;</a>
+        <a href="">Capabilities</a>
+        <a href="">About Us</a>
+        <a href="">Certifications</a>
+        <a href="">Customers</a>
+        <a href="">Employee Portal</a>
+        <a href="">Contact</a>
+    </nav>
+    <span class="logo"><a href="/index.html">IT Ally</a></span>
+    <span id="menu-btn" onclick="openNav()">Menu</span>
+    <span id="burger" onclick="openNav()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </span>
+    <main id="main">
+        <form novalidate="novalidate" action="https://www.example.com" id="form" method="post" enctype="text/plain">
+            <fieldset>
+                <legend>Name &amp; Email</legend>
+                <p>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="fname" placeholder="John">
+                </p>
+                <p>
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="lname" id="lname" placeholder="Doe">
+                </p>
+                <p>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com">
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Subject &amp; Comments</legend>
+                <p>
+                    <label for="subject">Subject</label>
+                    <select name="subject" id="subject" title="Subject Line">
+                        <option value="">Subject...</option>
+                        <option value="job">Job Inquiry</option>
+                        <option value="project">Project Inquiry</option>
+                        <option value="other">Other Comments</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="comments">Comments</label>
+                    <textarea name="comments" id="comments" cols="30" rows="5" placeholder="Comments here..."></textarea>
+                </p>
+            </fieldset>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </div>
+    </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js" integrity="sha512-rstIgDs0xPgmG6RX1Aba4KV5cWJbAMcvRCVmglpam9SoHZiUCyQVDdH2LPlxoHtrv17XWblE/V/PP+Tr04hbtA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/js/validate.js"></script>
+<script src="/js/nav.js"></script>
+<script src="/js/tilt.js"></script>
+</body>
+</html>
