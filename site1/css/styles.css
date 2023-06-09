@@ -7,6 +7,7 @@
     --black: #292929;
     --logo-bg1: #01699f;
     --logo-bg2: #167cc8;
+    --bg-img-one: url("/img/nodes.png") no-repeat fixed;
 }
 
 * {
@@ -23,6 +24,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background: var(--bg-img-one);
+    background-size: cover;
 }
 
 .wrapper {
@@ -32,32 +35,33 @@ body {
     text-align: center;
 }
 
-.logo {
+.logo-link {
     margin: 25px 0 0;
     padding: 10px 15px;
     font-size: 2em;
     background: linear-gradient(90deg, var(--color-secondary) 0%, var(--logo-bg2) 50%, var(--logo-bg1) 100%);
+    text-decoration: none;
 }
 
-.logo a {
+.logo {
     text-decoration: none;
     font-weight: 1000;
-    color: #fff;
+    color: var(--white);
 }
 
 /* Nav Menu */
 #menu-btn {
+    text-transform: uppercase;
     margin: 20px 0 0;
     font-size: 1.66em;
     font-weight: 800;
     cursor: pointer;
-    transition: .33s ease;
+    text-decoration: underline;
+    color: var(--white);
 }
 
 #menu-btn:hover {
-    color: var(--color-secondary);
-    text-shadow: 0 0 10px var(--color-main);
-    -webkit-text-stroke: .5px var(--color-main);
+    text-decoration: none;
 }
 
 .sidenav {
@@ -103,6 +107,10 @@ body {
 
 /* Form Styling */
 
+#form {
+    width: 90%;
+}
+
 fieldset {
     margin: 20px 0;
     border-radius: 5px;
@@ -130,6 +138,8 @@ fieldset p label {
     text-align: left;
     display: block;
     margin: 0 0 5px;
+    color: var(--white);
+    text-shadow: 0 0 10px var(--black);
 }
   
 textarea {
@@ -187,7 +197,7 @@ form textarea {
     justify-content: space-between;
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 400px;
+    grid-template-rows: 400px 400px;
 }
 
 .container .card {
@@ -202,16 +212,18 @@ form textarea {
 
 .container .card .face.face1 {
     position: relative;
-    background: #333;
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     transform: translateY(100px);
+    border: 5px solid var(--color-main);
 }
 
 .container .card:hover .face.face1 {
     background-color: var(--color-main);
+    border: 5px solid var(--white);
     transform: translateY(0);
 }
 
@@ -231,14 +243,18 @@ form textarea {
 .container .card .face.face1 .content h3 {
     margin: 10px 0 0;
     padding: 0;
-    color: #fff;
+    color: var(--color-main);
     text-align: center;
     font-size: 1.5em;
 }
 
+.container .card:hover .face.face1 .content h3 {
+    color: var(--white);
+}
+
 .container .card .face.face2 {
     position: relative;
-    background: #fff;
+    background: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -276,6 +292,70 @@ form textarea {
     text-decoration: none;
 }
 
+/* 
+Card Icons 
+Base Styling
+*/
+
+.card-img {
+    height: 100px;
+    width: 100px;
+    background-size: cover;
+    transition: .33s ease;
+}
+
+/* Images */
+
+#cap-img {
+    background-image: url("/img/home-blue.png");
+}
+
+#abo-img {
+    background-image: url("/img/about-blue.png");
+}
+
+#cer-img {
+    background-image: url("/img/cert-blue.png");
+}
+
+#cus-img {
+    background-image: url("/img/customer-blue.png");
+}
+
+#emp-img {
+    background-image: url("/img/employee-blue.png");
+}
+
+#con-img {
+    background-image: url("/img/contact.png");
+}
+
+/* Hover Images */
+
+.container .card:hover .face.face1 .content #cap-img {
+    background-image: url("/img/home.png");
+}
+
+.container .card:hover .face.face1 .content #abo-img {
+    background-image: url("/img/about.png");
+}
+
+.container .card:hover .face.face1 .content #cer-img {
+    background-image: url("/img/cert.png");
+}
+
+.container .card:hover .face.face1 .content #cus-img {
+    background-image: url("/img/customer.png");
+}
+
+.container .card:hover .face.face1 .content #emp-img {
+    background-image: url("/img/employee.png");
+}
+
+.container .card:hover .face.face1 .content #con-img {
+    background-image: url("/img/contact-blue.png");
+}
+
 /* End Card */
 
 /* Mobile/Tablet Screens */
@@ -287,7 +367,7 @@ form textarea {
         justify-content: space-between;
         display: grid;
         grid-template-columns: 300px 300px;
-        grid-template-rows: 400px;
+        grid-template-rows: 400px 400px;
     }
     
     form textarea {
@@ -324,17 +404,39 @@ form textarea {
         position: relative;
         justify-content: space-between;
         display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: 400px;
+        grid-template-columns: 200px 200px;
+        grid-template-rows: 300px 300px 300px;
+    }
+
+    .container .card .face {
+        width: 150px;
+        height: 150px;
+    }
+
+    .container .card .face.face1 .content h3 {
+        font-size: 1.05em;
+    }
+
+    .container .card .face.face1 {
+        transform: translateY(100px);
+    }
+
+    .container .card .face.face1 .content img {
+        max-width: 75px;
+    }
+
+    .container .card .face.face2 {
+        transform: translateY(0);
+        display: none;
+        transition: 0s;
     }
 
     .container .card:hover .face.face1 {
-        background-color: var(--color-main);
         transform: translateY(100px);
     }
 
     .container .card:hover .face.face2 {
-        transform: translateY(-100px);
+        transform: translateY(0);
     }
 
     form textarea {

@@ -34,10 +34,10 @@ $(function() {
         },
         messages: {
             fname: {
-                required: "Please enter your first name",
+                required: "Please enter your first name"
             },
             lname: {
-                required: "Please enter your last name",
+                required: "Please enter your last name"
             },
             email: {
                 required: "Please provide your email",
