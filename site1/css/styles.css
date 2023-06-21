@@ -7,8 +7,8 @@
     --black: #292929;
     --logo-bg1: #01699f;
     --logo-bg2: #167cc8;
-    --bg-img-one: url("/img/nodes.png") no-repeat fixed;
-    --bg-img-two: url("/img/ships.jpg") right no-repeat fixed;
+    --bg-img-one: url("../img/nodes.png") no-repeat fixed;
+    --bg-img-two: url("../img/ships.jpg") right no-repeat fixed;
 }
 
 * {
@@ -326,53 +326,53 @@ Base Styling
 /* Icons */
 
 #cap-img {
-    background-image: url("/img/home-blue.png");
+    background-image: url("../img/home-blue.png");
 }
 
 #abo-img {
-    background-image: url("/img/about-blue.png");
+    background-image: url("../img/about-blue.png");
 }
 
 #cer-img {
-    background-image: url("/img/cert-blue.png");
+    background-image: url("../img/cert-blue.png");
 }
 
 #cus-img {
-    background-image: url("/img/customer-blue.png");
+    background-image: url("../img/customer-blue.png");
 }
 
 #emp-img {
-    background-image: url("/img/employee-blue.png");
+    background-image: url("../img/employee-blue.png");
 }
 
 #con-img {
-    background-image: url("/img/contact.png");
+    background-image: url("../img/contact.png");
 }
 
 /* Hover Icons */
 
 .container .card:hover .face.face1 .content #cap-img {
-    background-image: url("/img/home.png");
+    background-image: url("../img/home.png");
 }
 
 .container .card:hover .face.face1 .content #abo-img {
-    background-image: url("/img/about.png");
+    background-image: url("../img/about.png");
 }
 
 .container .card:hover .face.face1 .content #cer-img {
-    background-image: url("/img/cert.png");
+    background-image: url("../img/cert.png");
 }
 
 .container .card:hover .face.face1 .content #cus-img {
-    background-image: url("/img/customer.png");
+    background-image: url("../img/customer.png");
 }
 
 .container .card:hover .face.face1 .content #emp-img {
-    background-image: url("/img/employee.png");
+    background-image: url("../img/employee.png");
 }
 
 .container .card:hover .face.face1 .content #con-img {
-    background-image: url("/img/contact-blue.png");
+    background-image: url("../img/contact-blue.png");
 }
 
 /* End Card */
@@ -457,7 +457,7 @@ section .text-container .text-box {
     margin: 30px;
     border: 3px solid var(--white);
     box-shadow: 0 20px 50px rgba(0, 0, 0, .8);
-    background: url("/img/placeholder.png") center no-repeat, var(--color-main);
+    background: url("../img/placeholder.png") center no-repeat, var(--color-main);
     background-size: cover;
 }
   
