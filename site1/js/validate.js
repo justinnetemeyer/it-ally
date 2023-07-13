@@ -19,7 +19,7 @@ $(function() {
                 required: true
             },
             lname: {
-                require: true
+                required: true
             },
             email: {
                 required: true,

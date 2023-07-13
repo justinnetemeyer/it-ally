@@ -41,15 +41,21 @@ body {
 .logo-link {
     margin: 25px 0 0;
     padding: 10px 15px;
-    font-size: 2em;
-    background: linear-gradient(90deg, var(--color-secondary) 0%, var(--logo-bg2) 50%, var(--logo-bg1) 100%);
+    font-size: 2rem;
     text-decoration: none;
+    transition: 1s ease;
+    line-height: 2.25rem;
 }
 
 .logo {
     text-decoration: none;
     font-weight: 1000;
     color: var(--white);
+    text-shadow: 5px 0 15px var(--black);
+}
+
+.logo-link:hover {
+    font-size: 2.25rem;
 }
 
 /* Nav Menu */
@@ -200,12 +206,32 @@ form textarea {
 /* Validation Error Styling */
 
 #fname-error,
+#lname-error,
 #email-error,
 #subject-error,
 #comments-error {
   padding: 10px 0 0;
   font-size: 1.25em;
   text-shadow: var(--color-secondary) 1px 0 5px;
+}
+
+
+/* If != Form */
+
+.contact-email-section {
+    margin: 15px;
+    padding: 10px;
+}
+
+.contact-email-section h1 {
+    font-size: 3rem;
+    color: var(--white);
+    padding: 10px;
+}
+
+.contact-email-section h2 {
+    font-size: 2.25rem;
+    color: var(--white);
 }
 
 /* Cards */
@@ -326,11 +352,11 @@ Base Styling
 /* Icons */
 
 #cap-img {
-    background-image: url("../img/home-blue.png");
+    background-image: url("../img/customer-blue.png");
 }
 
 #abo-img {
-    background-image: url("../img/about-blue.png");
+    background-image: url("../img/employee-blue.png");
 }
 
 #cer-img {
@@ -338,11 +364,11 @@ Base Styling
 }
 
 #cus-img {
-    background-image: url("../img/customer-blue.png");
+    background-image: url("../img/new-customer-blue.png");
 }
 
 #emp-img {
-    background-image: url("../img/employee-blue.png");
+    background-image: url("../img/home-blue.png");
 }
 
 #con-img {
@@ -352,11 +378,11 @@ Base Styling
 /* Hover Icons */
 
 .container .card:hover .face.face1 .content #cap-img {
-    background-image: url("../img/home.png");
+    background-image: url("../img/customer.png");
 }
 
 .container .card:hover .face.face1 .content #abo-img {
-    background-image: url("../img/about.png");
+    background-image: url("../img/employee.png");
 }
 
 .container .card:hover .face.face1 .content #cer-img {
@@ -364,11 +390,11 @@ Base Styling
 }
 
 .container .card:hover .face.face1 .content #cus-img {
-    background-image: url("../img/customer.png");
+    background-image: url("../img/new-customer.png");
 }
 
 .container .card:hover .face.face1 .content #emp-img {
-    background-image: url("../img/employee.png");
+    background-image: url("../img/home.png");
 }
 
 .container .card:hover .face.face1 .content #con-img {
