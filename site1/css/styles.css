@@ -8,7 +8,8 @@
     --logo-bg1: #01699f;
     --logo-bg2: #167cc8;
     --bg-img-one: url("../img/nodes.png") no-repeat fixed;
-    --bg-img-two: url("../img/ships.jpg") right no-repeat fixed;
+    --bg-img-two: url("../img/nodes-bg-ships.png") no-repeat fixed;
+    --bg-img-three: url("../img/nodes-bg-dark.png") no-repeat fixed;
 }
 
 * {
@@ -22,6 +23,26 @@ body {
     color: var(--black);
     background-color: var(--white);
     background: var(--bg-img-one);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.dark-bg {
+    font-family: var(--font-system);
+    color: var(--black);
+    background-color: var(--white);
+    background: var(--bg-img-three);
+    background-size: cover;
+    min-height: 100vh;
+    position: relative;
+}
+
+.ships-bg {
+    font-family: var(--font-system);
+    color: var(--black);
+    background-color: var(--white);
+    background: var(--bg-img-two);
     background-size: cover;
     min-height: 100vh;
     position: relative;
@@ -41,10 +62,10 @@ body {
 .logo-link {
     margin: 25px 0 0;
     padding: 10px 15px;
-    font-size: 2rem;
+    font-size: 5rem;
     text-decoration: none;
     transition: 1s ease;
-    line-height: 2.25rem;
+    line-height: 5.25rem;
 }
 
 .logo {
@@ -55,7 +76,7 @@ body {
 }
 
 .logo-link:hover {
-    font-size: 2.25rem;
+    font-size: 5.25rem;
 }
 
 /* Nav Menu */
@@ -142,6 +163,7 @@ fieldset {
     border: 2px solid var(--color-secondary);
     border-style: outset;
     box-shadow: var(--black) 1px 1px 4px;
+    background: rgba(0, 0, 0, .7)
 }
   
 fieldset legend {
@@ -196,6 +218,7 @@ form textarea {
     border-style: outset;
     border-radius: 10px;
     transition: .25s;
+    font-size: 1.5em;
 }
   
 #submit:hover {
@@ -407,7 +430,7 @@ Base Styling
 
 .cap-content {
     color: var(--white);
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .7);
     padding: 10px;
     margin: 50px;
     text-align: left;
@@ -428,7 +451,7 @@ Base Styling
 
 .about-content {
     color: var(--white);
-    background: rgba(0, 0, 0, .5);
+    background: rgba(0, 0, 0, .7);
     padding: 10px;
     margin: 50px;
     text-align: left;
@@ -449,7 +472,7 @@ Base Styling
 /* Cert + Customer Content */
 
 section {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -526,6 +549,10 @@ section .text-container .text-box {
     text-decoration: none;
 }
 
+.dhs-poster {
+    margin: 0 0 40px 0;
+}
+
 /* End Employee Content */
 
 /* Footer */
@@ -546,6 +573,12 @@ footer .footer-content {
     background: rgba(0, 0, 0, .5);
 }
 
+footer .footer-content .footer-home {
+    font-size: 1.25em;
+    color: var(--white);
+    margin: 5px 0;
+}
+
 footer .footer-content .footer-links {
     margin: 5px 0;
 }
@@ -557,7 +590,8 @@ footer .footer-content .footer-links a {
     text-transform: uppercase;
 }
 
-footer .footer-content .footer-links a:hover {
+footer .footer-content .footer-links a:hover,
+.footer-home:hover {
     text-decoration: none;
 }
 
@@ -671,5 +705,10 @@ footer .footer-content .footer-links a:hover {
         height: 100px;
         width: 100px;
         margin: 20px 10px;
+    }
+
+    .dhs-poster {
+        height: 512px;
+        width: 341px;
     }
 }
