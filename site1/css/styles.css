@@ -26,6 +26,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     position: relative;
+    zoom: 90%;
 }
 
 .dark-bg {
@@ -36,6 +37,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     position: relative;
+    zoom: 90%;
 }
 
 .ships-bg {
@@ -46,6 +48,7 @@ body {
     background-size: cover;
     min-height: 100vh;
     position: relative;
+    zoom: 90%;
 }
 
 .wrapper {
@@ -56,7 +59,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-bottom: 170px;
+    padding-bottom: 2.5rem;
 }
 
 .logo-link {
@@ -580,6 +583,7 @@ footer {
     text-align: center;
     position: absolute;
     bottom: 0;
+    height: 2.5rem;
 }
 
 footer .footer-content {
