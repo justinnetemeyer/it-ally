@@ -163,7 +163,7 @@ fieldset {
     border: 2px solid var(--color-secondary);
     border-style: outset;
     box-shadow: var(--black) 1px 1px 4px;
-    background: rgba(0, 0, 0, .7)
+    background: rgba(0, 0, 0, .5)
 }
   
 fieldset legend {
@@ -265,7 +265,7 @@ form textarea {
     justify-content: space-between;
     display: grid;
     grid-template-columns: 300px 300px 300px;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 300px 300px;
 }
 
 .container .card {
@@ -430,20 +430,30 @@ Base Styling
 
 .cap-content {
     color: var(--white);
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .5);
     padding: 10px;
     margin: 50px;
     text-align: left;
 }
 
-.cap-content h2 {
+.cap-content section {
+    min-height: 0;
+    display: inherit;
+}
+
+.cap-content section:nth-child(2) {
+    margin: 40px 0;
+}
+
+.cap-content section h2 {
     font-size: 1.5rem;
 }
 
-.cap-content p {
+.cap-content section p {
     padding: 10px 0;
     font-size: 1.25rem;
 }
+
 
 /* End Cap Content */
 
@@ -451,7 +461,7 @@ Base Styling
 
 .about-content {
     color: var(--white);
-    background: rgba(0, 0, 0, .7);
+    background: rgba(0, 0, 0, .5);
     padding: 10px;
     margin: 50px;
     text-align: left;
@@ -465,6 +475,12 @@ Base Styling
 .about-content p {
     padding: 10px 0;
     font-size: 1.25rem;
+}
+
+.about-content p:nth-child(2),
+.about-content p:nth-child(3)
+{
+    margin: 40px 0;
 }
 
 /* End About Content */
@@ -560,7 +576,6 @@ section .text-container .text-box {
 footer {
     width: 100%;
     color: var(--white);
-    margin: 30px 0 0 0;
     border-top: 3px solid var(--white);
     text-align: center;
     position: absolute;
